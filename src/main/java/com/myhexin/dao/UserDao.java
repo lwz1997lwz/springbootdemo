@@ -3,6 +3,8 @@ package com.myhexin.dao;
 import com.myhexin.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @program: springbootdemo
  * @description:
@@ -17,5 +19,9 @@ public interface UserDao {
      * @param id
      * @return
      */
-    public User getUserById(int id);
+    User getUserById(int id);
+
+    void save(User user);
+
+    List<User> listUsers();
 }

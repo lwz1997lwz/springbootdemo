@@ -13,4 +13,12 @@
     <select id="getUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select * from user where id=#{id}
     </select>
+
+    <insert id="save">
+        insert into user value(#{id},#{userName},#{passWord})
+    </insert>
+
+    <select id="listUsers" resultType="list" resultMap="BaseResultMap">
+        select * from user;
+    </select>
 </mapper>

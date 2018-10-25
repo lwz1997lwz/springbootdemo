@@ -20,4 +20,16 @@ public class UserServiceImplTest {
         User user = userService.getUserById(1);
         System.out.println(user);
     }
+    @Test
+    public void saveUser(){
+        User user = new User();
+        user.setId(3);
+        user.setPassWord("333");
+        user.setUserName("333");
+        userService.save(user);
+    }
+    @Test
+    public void listUser(){
+        System.out.println(userService.listUsers());
+    }
 }

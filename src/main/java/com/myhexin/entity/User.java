@@ -1,12 +1,14 @@
 package com.myhexin.entity;
 
+import java.io.Serializable;
+
 /**
  * @program: springbootdemo
  * @description: User类
  * @author: Linweizhe
  * @create: 2018-10-24 09:57
  **/
-public class User {
+public class User implements Serializable {
     private int id;
     private String userName;
     private String passWord;
